@@ -1,0 +1,182 @@
+/* General Styles */
+/* Remove main scrollbar */
+html, body {
+  overflow: hidden; /* Prevents the page from scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  min-width: 400px;
+  
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h1 {
+  margin: 0;
+  display: inline;
+  font-size: 24px; /* Reduced title size */
+}
+
+/* Dark Mode Toggle Button */
+#toggleDarkMode {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Textareas */
+#noteTitle {
+  width: 95%;
+  height: 40px; /* Smaller title box */
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+#noteDescription {
+  width: 95%;
+  height: 100px; /* Larger description box */
+  font-size: 15px;
+}
+
+textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Save Button */
+#saveNote {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#saveNote:hover {
+  background-color: #218838;
+}
+
+/* Notes List */
+#notesList {
+  margin-top: 20px;
+  max-height: 300px; /* Limit height */
+  overflow-y: auto;  /* Enables vertical scrolling */
+  display: flex;
+  flex-direction: column; /* Ensures vertical flow */
+  gap: 10px; /* Adds space between notes */
+  padding: 5px;
+}
+
+/* Individual Note */
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align to top */
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  word-wrap: break-word;
+}
+
+/* Note Content */
+.note-content {
+  flex-grow: 1;
+  overflow: hidden; /* Prevents individual note scrolling */
+  text-overflow: ellipsis;
+}
+
+/* Buttons Container */
+.note-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #ff4747;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Dark Mode Styles */
+.dark-mode .container {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode textarea,
+.dark-mode button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode #notesList .note-item {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+.dark-mode .edit-btn {
+  background-color: #007bff;
+}
+
+.dark-mode .delete-btn {
+  background-color: #ff4747;
+}
